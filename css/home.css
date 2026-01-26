@@ -19,6 +19,16 @@ header {
   padding: 2.5rem 10%;
 }
 
+header.container {
+  position: relative;
+  overflow: visible !important; /* Ensures the menu can hang below the header */
+}
+
+/* Ensure the row doesn't clip the menu either */
+header .row {
+  overflow: visible !important;
+}
+
 .logo-terminal {
   display: flex;
   align-items: center;
@@ -41,7 +51,7 @@ header {
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+  50% { opacity: 0; }
 }
 
 nav{
@@ -62,6 +72,33 @@ nav ul{
 header li a{
   text-decoration: none;
   color: #E5E7EB
+}
+
+@media (max-width: 991px) {
+  header nav ul#nav-list {
+    display: none !important;
+    position: absolute;
+    top: 100%; /* Positions the menu right at the bottom of the header */
+    left: 0;
+    width: 100%;
+    background: #111827; 
+    padding: 2rem;
+    z-index: 9999;
+
+    /* ADDED THESE TWO LINES TO STACK ITEMS */
+    flex-direction: column; 
+    align-items: center; 
+    
+    /* Tighten the gap for vertical stacking */
+    gap: 1.5rem !important;
+    
+    /* Optional: Add a subtle shadow so it stands out from the content below */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  }
+
+  header nav ul#nav-list.active {
+    display: flex !important;
+  }
 }
 
 /* End of header style */
@@ -109,10 +146,6 @@ main{
 }
 
 @media (max-width: 991px){
-  nav{
-    display: none;
-  }
-  
   .buttons{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
