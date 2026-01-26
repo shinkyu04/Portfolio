@@ -47,7 +47,7 @@ header {
 nav{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 nav ul{
@@ -62,12 +62,6 @@ nav ul{
 header li a{
   text-decoration: none;
   color: #E5E7EB
-}
-
-@media (max-width: 992px) {
-  nav{
-    display: none;
-  }
 }
 
 /* End of header style */
@@ -109,15 +103,23 @@ main{
   font-size: 1.5rem;
   background: white;
   padding: 0.5rem 1rem;
-  margin: 0.5rem;
   border-radius: 1rem;
   text-decoration: none;
+  box-shadow: 5px 5px 5px #007bff;
 }
 
 @media (max-width: 991px){
+  nav{
+    display: none;
+  }
+  
   .buttons{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
+    text-align: center;
+  }
+
+  .intro h1, h2 {
     text-align: center;
   }
 }
@@ -145,7 +147,7 @@ main{
   }
 
   .intro h2{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0rem 0rem 1.5rem 0rem;
   }
 
@@ -162,6 +164,7 @@ main{
   .buttons a{
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
+    margin: 1rem 0rem 0rem 0rem !important;
   }
 }
 
