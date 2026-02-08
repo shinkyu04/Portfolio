@@ -310,6 +310,7 @@ main .intro{
 .group {
   display: flex;
   animation: slideRight 20s linear infinite;
+  margin-bottom: 2rem;
 }
 
 .group img {
