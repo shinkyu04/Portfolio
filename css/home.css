@@ -244,8 +244,6 @@ main .intro{
   }
 }
 
-
-
 @media (max-width: 454px){
   .intro h1{
     font-size: 2rem;
@@ -270,6 +268,69 @@ main .intro{
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+/* Tech Stack style */
+
+.tech-bg{
+  background: url('../images/tech-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.tech-title{
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: bolder;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.tech-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%); /* The "secret sauce" for perfect centering */
+  width: 5rem;                 /* Your specific width */
+  height: 0.8rem;                /* Thickness of the line */
+  background-color: #007bff;  /* Line color */
+  border-radius: 1rem;
+}
+
+/* The container that hides the overflow */
+.carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+
+/* The wrapper that actually moves */
+.group {
+  display: flex;
+  animation: slideRight 20s linear infinite;
+}
+
+.group img {
+  width: 230px;
+  height: 230px; 
+  object-fit: contain;  /* Crucial: This prevents stretching by scaling the image to fit inside the 150x150 box */
+  flex-shrink: 0; /* Prevents the flex container from squishing them */
+  margin: 2.5rem;
+}
+
+@media (max-width: 720px){
+  .group img {
+    width: 150px;
+    height: 150px; 
+    margin: 1.5rem;
+  }
+}
+
+@keyframes slideRight {
+  from {translate: -100%;}
+  to {translate: 0%;}
 }
 
 /* End of main style */
