@@ -98,23 +98,44 @@ header li a{
     top: 100%; /* Positions the menu right at the bottom of the header */
     left: 0;
     width: 100%;
-    background: #111827; 
+    background: #111827;
     padding: 2rem;
     z-index: 9999;
 
     /* ADDED THESE TWO LINES TO STACK ITEMS */
-    flex-direction: column; 
-    align-items: center; 
-    
+    flex-direction: column;
+    align-items: center;
+
     /* Tighten the gap for vertical stacking */
     gap: 1.5rem !important;
-    
+
     /* Optional: Add a subtle shadow so it stands out from the content below */
     box-shadow: 0 10px 15px rgba(0,0,0,0.3);
   }
 
   header nav ul#nav-list.active {
     display: flex !important;
+  }
+
+  /* Burger icon styles */
+  .burger-line {
+    width: 25px;
+    height: 2px;
+    background: #E5E7EB;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  #burger.active .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  #burger.active .line2 {
+    opacity: 0;
+  }
+
+  #burger.active .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }
 

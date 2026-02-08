@@ -28,9 +28,9 @@
 
         <div class="col-4 d-lg-none text-end">
           <button id="burger" class="border-0 bg-transparent">
-            <div style="width:25px; height:2px; background:#E5E7EB; margin: 5px 0;"></div>
-            <div style="width:25px; height:2px; background:#E5E7EB; margin: 5px 0;"></div>
-            <div style="width:25px; height:2px; background:#E5E7EB; margin: 5px 0;"></div>
+            <div class="burger-line line1"></div>
+            <div class="burger-line line2"></div>
+            <div class="burger-line line3"></div>
           </button>
         </div>
         
@@ -83,15 +83,9 @@
         if (burger && navList) {
           burger.addEventListener('click', (e) => {
             // Prevent click from bubbling up (useful for closing menu when clicking outside)
-            e.stopPropagation(); 
+            e.stopPropagation();
             navList.classList.toggle('active');
-          });
-
-          // Optional: Close the menu if you click anywhere else on the page
-          document.addEventListener('click', () => {
-            if (navList.classList.contains('active')) {
-              navList.classList.remove('active');
-            }
+            burger.classList.toggle('active');
           });
         }
       });
