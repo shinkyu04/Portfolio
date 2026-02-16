@@ -654,7 +654,7 @@ main .intro{
   font-size: 0.95rem;
   line-height: 1.6;
   color: #555;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #535353;
   padding-top: 15px;
 }
 
@@ -677,6 +677,188 @@ main .intro{
   }
 }
 
+/* Contacts design */
+.contact-container {
+  padding: 60px;
+  margin: 60px;
+}
+
+.contact-container .cont-text{
+  margin-left: 60px;
+  margin-right: 20px;
+}
+
+.contact-container .cont-text h1{
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+
+.contact-container .cont-text hr{
+  width: 100px;
+  height: 15px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 10px;
+  opacity: 1;
+  margin-bottom: 100px;
+}
+
+.contact-container .cont-text p{
+  font-size: 1.2em;
+  line-height: 2.3em;
+  text-align: justify;
+}
+
+.contact-container .cont-text .cell{
+  margin-top: 80px;
+}
+
+@media (max-width: 1320px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-container .cont-text h1{
+    font-size: 3.5rem;
+  }
+
+  .contact-container .cont-text p{
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 1140px) {
+  .contact-container .cont-text h1{
+    font-size: 3.3rem;
+  }
+
+  .contact-container .cont-text p{
+    font-size: 1em;
+  }
+}
+
+/* Contact Form Styling */
+.cont-form {
+  margin-left: 1rem;
+  border-left: dashed white 3px;
+}
+
+.cont-form form{
+  margin-top: 1rem;
+  padding-left: 2rem;
+}
+
+.cont-form .group-input {
+  margin-bottom: 1.5rem;
+}
+
+.cont-form .form-label {
+  font-size: 1.2rem;
+}
+
+.cont-form input {
+  padding: 0.8rem;
+}
+
+label.required-label::after {
+  content: " *";   /* Injects the star */
+  color: red;      /* Makes it red */
+  font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  .contact-container {
+    padding: 10px;
+    margin: 60px;
+  }
+
+  .contact-container .cont-text{
+    margin: 1rem 0rem;
+    padding: 0rem 2rem;
+  }
+
+  .contact-container .cont-text h1{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .contact-container .cont-text hr{
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+
+  .contact-container .cont-text p{
+    font-size: 1.2em;
+    line-height: 2.3em;
+  }
+
+  .contact-container .cont-text .cell{
+    margin-top: 60px;
+  }
+
+  .cont-form {
+    margin-left: 0rem;
+    border: none;
+  }
+
+  .cont-form form {
+    margin-top: 2rem;
+    padding: 2rem; /* Shorthand for top/bottom/left/right */
+    padding-right: 2rem; 
+    
+    /* 1. Semi-transparent background (White with 10% opacity) */
+    background-color: rgba(255, 255, 255, 0.03); 
+    
+    /* 2. The Blur effect */
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px); /* Support for Safari */
+    
+    /* 3. Subtle border to define the edges (The "Shine") */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* 4. Rounded corners (essential for the glass look) */
+    border-radius: 15px;
+    
+    /* 5. A soft shadow to give it depth */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .cont-form .group-input {
+    margin-bottom: 1.5rem;
+  }
+
+  .cont-form .form-label {
+    font-size: 1.2rem;
+  }
+
+  .cont-form input {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-container .cont-text h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .contact-container .cont-text p{
+    font-size: 1em;
+    line-height: 2.3em;
+  }
+
+  .contact-container .cont-text hr{
+    width: 80px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+}
 
 /* End of main style */
 
