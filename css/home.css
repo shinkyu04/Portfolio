@@ -177,7 +177,7 @@ main .intro{
 .intro h2{
   font-size: 2rem;
   margin-bottom: 2.5rem;
-  background: linear-gradient(90deg, #3B82F6, #60A5FA); 
+  background: linear-gradient(90deg, #007bff, #00d4ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -198,6 +198,13 @@ main .intro{
   text-decoration: none;
   box-shadow: 5px 5px 5px #007bff;
   padding: 1rem 1.5rem;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.buttons a:hover{
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  color: white;
+  box-shadow: 5px 5px 5px #007bff;
 }
 
 @media (min-width: 1320px) {
@@ -687,7 +694,7 @@ main .intro{
 .contact-container .cont-text hr{
   width: 100px;
   height: 15px;
-  background-color: #007bff;
+  background: linear-gradient(90deg, #007bff, #00d4ff);
   border: none;
   border-radius: 10px;
   opacity: 1;
@@ -752,9 +759,27 @@ main .intro{
 }
 
 label.required-label::after {
-  content: " *";   /* Injects the star */
+  content: "*";   /* Injects the star */
   color: red;      /* Makes it red */
   font-weight: bold;
+}
+
+.cont-form button {
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  color: white;
+  font-weight: 800;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.cont-form button:hover {
+  background: white;
+  color: black;
+}
+
+.cont-form textarea {
+  overflow: hidden;   /* Hide scrollbars */
+  resize: none;       /* Disable manual dragging */
+  transition: height 0.1s ease; /* Optional: smooth the growth */
 }
 
 @media (max-width: 992px) {
@@ -854,13 +879,17 @@ label.required-label::after {
 /* Scroll effect for navigation to go to different sections of the page */
 
 #tech-stack {
-  /* Adjust the 80px to match the height of your header */
   scroll-margin-top: 150px; 
+  scroll-behavior: smooth;
 }
 
 #about-me {
-  /* Adjust the 80px to match the height of your header */
   scroll-margin-top: 50px; 
+  scroll-behavior: smooth;
+}
+
+#projects, #contact {
+  scroll-behavior: smooth;
 }
 
 /* End of main style */

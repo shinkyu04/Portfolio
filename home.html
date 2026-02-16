@@ -248,10 +248,10 @@
 
             <div class="group-input">
               <label for="messageTextarea" class="form-label required-label">Message:</label>
-              <textarea class="form-control" id="messageTextarea" rows="7" required></textarea>
+              <textarea class="form-control" id="messageTextarea" rows="7" oninput="autoResize(this)" placeholder="Type something here..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
+            <button type="submit" class="btn w-100">Submit</button>
           </form>
         </div>
       </div>
@@ -277,6 +277,15 @@
           });
         }
       });
+
+      function autoResize(textarea) {
+        // Reset height to 'auto' first so it can shrink if text is deleted
+        textarea.style.height = 'auto'; 
+        
+        // Set the height to match the scroll height (content size)
+        textarea.style.height = textarea.scrollHeight + 'px';
+      }
+      
     </script>
   </body>
 </html>
