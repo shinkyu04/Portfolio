@@ -7,7 +7,6 @@ body{
   margin: 0;
   background: linear-gradient(145deg, #0F172A, #1E293B, #1E3A8A);
   background-repeat: no-repeat;
-  background-repeat: no-repeat;
   background-attachment: fixed;   /* optional: keeps it fixed on scroll */
   background-size: cover; 
   font-family: 'Roboto Mono', monospace;
@@ -72,7 +71,7 @@ nav ul{
 
 header li a{
   text-decoration: none;
-  color: #E5E7EB
+  color: #E5E7EB;
 }
 
 @media (min-width: 1320px) {
@@ -346,26 +345,12 @@ main .intro{
 }
 
 @keyframes slideRight {
-  from {translate: -100%;}
-  to {translate: 0%;}
+  0% { translate: -100%; }
+  100% { translate: 0%; }
 }
 
 
 /* Projects section style */ 
-
-/* The Badge: Small text above the main title */
-.modern-badge {
-  display: inline-block;
-  background: rgba(0, 123, 255, 0.1); /* Light blue tint */
-  color: #007bff; /* Your brand blue */
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
 
 /* The Main Title */
 
@@ -421,7 +406,6 @@ main .intro{
 
 .card-item .card-title{
   font-weight: 800;
-  font-size: ;
   text-align: center;
   margin: 0.5em 0em;
 }
@@ -495,17 +479,6 @@ main .intro{
 
 .card-link a:hover .card-item::after {
   opacity: 1; /* Fade in the dark cover */
-}
-
-.modern-badge {
-  display: inline-block;
-  background: rgba(0, 123, 255, 0.1);
-  color: #007bff;
-  padding: 5px 15px;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
 }
 
 .gradient-title-exp {
