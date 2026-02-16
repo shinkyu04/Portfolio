@@ -62,7 +62,7 @@ nav{
 
 nav ul{
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   list-style: none;
   font-size: large;
   justify-content: center;
@@ -71,7 +71,26 @@ nav ul{
 
 header li a{
   text-decoration: none;
+  padding: 0.5rem 1rem;
   color: #E5E7EB;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+header li a:hover{
+  /* 1. Use a semi-transparent white (for a light glass look) */
+  background-color: rgba(255, 255, 255, 0.15); 
+  
+  /* 2. Add the blur to the background behind the link */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
+  /* 3. Standard styling */
+  padding: 0.5rem 1rem;
+  border-radius: 8px; /* Rounded corners make the glass look better */
+  
+  /* 4. Optional: A thin border and smooth transition */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff; /* Ensures text stays visible */
 }
 
 @media (min-width: 1320px) {
@@ -830,6 +849,18 @@ label.required-label::after {
     margin-top: 20px;
     margin-bottom: 60px;
   }
+}
+
+/* Scroll effect for navigation to go to different sections of the page */
+
+#tech-stack {
+  /* Adjust the 80px to match the height of your header */
+  scroll-margin-top: 150px; 
+}
+
+#about-me {
+  /* Adjust the 80px to match the height of your header */
+  scroll-margin-top: 50px; 
 }
 
 /* End of main style */
