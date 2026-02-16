@@ -502,8 +502,7 @@ main .intro{
 
 .roadmap-container {
   padding: 80px 0;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-              url('../images/work-experience.jpg');
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/work-experience.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
