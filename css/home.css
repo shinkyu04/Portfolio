@@ -711,7 +711,7 @@ main .intro{
 }
 
 .contact-container .cont-text h1{
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 600;
 }
 
@@ -766,7 +766,6 @@ main .intro{
 }
 
 .cont-form form{
-  margin-top: 1rem;
   padding-left: 2rem;
 }
 
@@ -914,6 +913,61 @@ label.required-label::after {
 
 #projects, #contact {
   scroll-behavior: smooth;
+}
+
+.arrow {
+  position: fixed;    /* Stays in the same spot even when you scroll */
+  bottom: 40px;       /* Distance from the bottom of the screen */
+  right: 40px;        /* Distance from the right of the screen */
+  z-index: 9999;      /* Ensures it sits 'on top' of all other layers */
+  
+  /* Optional: Styling to make it look like a button */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  /* 1. Use RGBA to make the color transparent (0.7 = 70% opacity) */
+  background-color: rgba(31, 41, 55, 0.7); 
+  
+  /* 2. The magic: blurs whatever is BEHIND the element */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+  
+  /* 3. A thin, semi-transparent border to catch the light */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* 4. Optional: A subtle shadow to give it depth */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  color: white;
+  padding: 20px 10px;
+  border-radius: 50%;
+  text-decoration: none;
+
+  /* JS hidden default */
+  opacity: 1;           /* Hidden by default */
+  visibility: hidden;    /* Prevents clicking it while hidden */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s, linear 0.3s;
+}
+
+/* This class will be added by JavaScript */
+.arrow.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.6); 
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.15);
+  color: black;
+}
+
+.arrow i{
+  font-size: 1.5rem;
+  padding: 0.5rem 1.3rem;
 }
 
 /* End of main style */
