@@ -21,3 +21,7 @@ function autoResize(textarea) {
     // Set the height to match the scroll height (content size)
     textarea.style.height = textarea.scrollHeight + 'px';
 }
+
+// Get the current year and inject it into the span
+const yearSpan = document.querySelector('#current-year');
+yearSpan.textContent = new Date().getFullYear();
