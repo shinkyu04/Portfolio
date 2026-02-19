@@ -85,9 +85,9 @@ function sendMail() {
     if (lastSub && (now - lastSub < cooldown)) {
         const remaining = Math.ceil((cooldown - (now - lastSub)) / 1000);
         Swal.fire({
-            title: "Oops...!",
+            title: "You've recently sent a message!",
             text: `Please wait ${remaining} seconds before sending another message.`,
-            icon: "error"
+            icon: "warning"
         });
         return;
     }
