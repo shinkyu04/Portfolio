@@ -15,7 +15,7 @@ body{
 
 /* Start of header style */
 header {
-  margin: 3rem 0rem 6rem 0rem;
+  margin: 3rem 0rem 0rem 0rem;
 }
 
 header.container {
@@ -71,7 +71,7 @@ nav ul{
 
 header li a{
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   color: #E5E7EB;
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
@@ -166,11 +166,11 @@ main{
 
 main .intro{
   color: white;
-  margin: 5rem 5%;
+  margin: 3rem 5%;
 }
 
 .intro h1{
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
 }
 
@@ -191,7 +191,7 @@ main .intro{
 
 .buttons a{
   color: black;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background: white;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
@@ -207,8 +207,13 @@ main .intro{
   box-shadow: 5px 5px 5px #007bff;
 }
 
-@media (min-width: 1320px) {
-  .buttons a{
+@media (min-width: 1600px) {
+
+  main .intro{
+    margin: 6rem 5%;
+  }
+
+  .buttons a {
     padding: 1rem 2rem;
   }
 
@@ -223,6 +228,25 @@ main .intro{
   .intro p {
     font-size: 1.5rem;
     line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1320px) {
+  .buttons a {
+    padding: 0.8rem 1.5rem; /* Slightly smaller padding */
+  }
+
+  .intro h1 {
+    font-size: 3.5rem; /* Scaled down from 4.5rem to fit 125% scale */
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1.25rem;
+    line-height: 2rem;
   }
 }
 
@@ -698,7 +722,7 @@ main .intro{
   border: none;
   border-radius: 10px;
   opacity: 1;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .contact-container .cont-text p{
@@ -708,7 +732,7 @@ main .intro{
 }
 
 .contact-container .cont-text .cell{
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 @media (max-width: 1320px) {
@@ -864,7 +888,7 @@ label.required-label::after {
   }
 
   .contact-container .cont-text p{
-    font-size: 1em;
+    font-size: 0.8em;
     line-height: 2.3em;
   }
 
@@ -879,12 +903,12 @@ label.required-label::after {
 /* Scroll effect for navigation to go to different sections of the page */
 
 #tech-stack {
-  scroll-margin-top: 150px; 
+  scroll-margin-top: 5vh; 
   scroll-behavior: smooth;
 }
 
 #about-me {
-  scroll-margin-top: 50px; 
+  scroll-margin-top: 5vh; 
   scroll-behavior: smooth;
 }
 
