@@ -56,3 +56,58 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth' // This makes it glide instead of jumping
     });
 });
+
+(function(){
+    emailjs.init("fLW5bk1yepj2yZOZH");
+})();
+
+function sendMail() {
+    let params = {
+        name: document.getElementById('nameInput').value.trim() || 'Web Profile Visitor',
+        email: document.getElementById('emailInput').value.trim(),
+        subject: document.getElementById('subjectInput').value.trim() || 'Email Message from Web Portfolio',
+        message: document.getElementById('messageTextarea').value.trim()
+    };
+
+    const contactForm = document.getElementById('contact-form');
+
+    const honey = document.getElementById('honeypot').value;
+
+    if (honey !== "") {
+        console.log("Something went wrong!");
+        return; // Kill the process quietly
+    }
+
+    const lastSub = localStorage.getItem('last_submission');
+    const now = Date.now();
+    const cooldown = 120000; // 2 minutes in milliseconds
+
+    if (lastSub && (now - lastSub < cooldown)) {
+        const remaining = Math.ceil((cooldown - (now - lastSub)) / 1000);
+        Swal.fire({
+            title: "Oops...!",
+            text: `Please wait ${remaining} seconds before sending another message.`,
+            icon: "error"
+        });
+        return;
+    }
+
+    emailjs.send('service_qw727zr', 'template_sh1ha7y', params).then(
+        function(response) {
+            Swal.fire({
+                title: "Email Sent!",
+                text: "Your message has been sent",
+                icon: "success",
+            });
+            contactForm.reset();
+            localStorage.setItem('last_submission', Date.now());
+        },
+        function(error) {
+            Swal.fire({
+                title: "Oops...!",
+                text: "Something went wrong",
+                icon: "error"
+            });
+        }
+    );
+}
