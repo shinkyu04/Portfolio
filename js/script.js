@@ -71,7 +71,10 @@ backToTopButton.addEventListener('click', () => {
     emailjs.init("fLW5bk1yepj2yZOZH");
 })();
 
-function sendMail() {
+function sendMail(event) {
+
+    event.preventDefault(); //This prevent the page to refresh when the submit button is clicked
+
     let params = {
         name: document.getElementById('nameInput').value.trim() || 'Web Profile Visitor',
         email: document.getElementById('emailInput').value.trim(),

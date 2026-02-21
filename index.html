@@ -242,7 +242,7 @@
         </div>
 
         <div class="col-12 col-lg-5 col-xxl-6 text-light cont-form">
-          <form id="contact-form">
+          <form id="contact-form" onsubmit="sendMail(event)">
             <div class="group-input">
               <label for="nameInput" class="form-label">Name:</label>
               <input type="text" class="form-control" id="nameInput" placeholder="Input your name here">
@@ -268,7 +268,7 @@
                 <input type="text" id="honeypot" name="honeypot" tabindex="-1" autocomplete="off">
             </div>
 
-            <button type="submit" onclick="sendMail()" class="btn w-100">Submit</button>
+            <button type="submit" class="btn w-100">Submit</button>
           </form>
         </div>
       </div>
