@@ -693,7 +693,6 @@ main .intro{
   color: #555;
   border-top: 1px solid #535353;
   padding-top: 15px;
-  text-align: justify;
 }
 
 /* MOBILE VIEW OVERRIDES */
@@ -903,7 +902,7 @@ label.required-label::after {
   }
 
   .contact-container .cont-text p{
-    font-size: 0.8em;
+    font-size: 1em;
     line-height: 2.3em;
   }
 
