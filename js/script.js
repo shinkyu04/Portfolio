@@ -1,3 +1,13 @@
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        // When they leave your tab
+        document.title = "Hey! Come back! 🥺";
+    } else {
+        // When they click back onto your tab
+        document.title = "Joshua | Portfolio";
+    }
+});
+
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.getElementById('burger');
@@ -92,22 +102,25 @@ function sendMail() {
         return;
     }
 
-    emailjs.send('service_qw727zr', 'template_sh1ha7y', params).then(
-        function(response) {
-            Swal.fire({
-                title: "Email Sent!",
-                text: "Your message has been sent",
-                icon: "success",
-            });
-            contactForm.reset();
-            localStorage.setItem('last_submission', Date.now());
-        },
-        function(error) {
-            Swal.fire({
-                title: "Oops...!",
-                text: "Something went wrong",
-                icon: "error"
-            });
-        }
-    );
+    emailjs.send('service_qw727zr', 'template_sh1ha7y', params)
+        .then(
+            function() {
+                Swal.fire({
+                    title: "Email Sent!",
+                    text: "Your message has been sent",
+                    icon: "success",
+                });
+                contactForm.reset();
+                localStorage.setItem('last_submission', Date.now());
+            }
+        )
+        .catch(
+            function() {
+                Swal.fire({
+                    title: "Oops...!",
+                    text: "Something went wrong",
+                    icon: "error"
+                });
+            }
+        )
 }
