@@ -78,7 +78,7 @@ header li a{
 
 header li a:hover{
   /* 1. Use a semi-transparent white (for a light glass look) */
-  background-color: rgba(255, 255, 255, 0.15); 
+  background: rgba(0, 123, 255, 0.2); /* Light blue tint */
   
   /* 2. Add the blur to the background behind the link */
   backdrop-filter: blur(8px);
@@ -89,7 +89,7 @@ header li a:hover{
   border-radius: 8px; /* Rounded corners make the glass look better */
   
   /* 4. Optional: A thin border and smooth transition */
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.3);
   color: #fff; /* Ensures text stays visible */
 }
 
@@ -166,7 +166,7 @@ main{
 
 main .intro{
   color: white;
-  margin: 3rem 5%;
+  margin: 4rem 5% 5rem 5%;
 }
 
 .intro h1{
@@ -184,7 +184,7 @@ main .intro{
 
 .intro p{
   font-size: 1rem;
-  margin: 3rem 0rem 5rem 0rem;
+  margin: 3rem 0rem 3rem 0rem;
   line-height: 2rem;
   text-align: justify;
 }
@@ -193,7 +193,6 @@ main .intro{
   color: black;
   font-size: 1rem;
   background: white;
-  padding: 0.5rem 1rem;
   border-radius: 1rem;
   text-decoration: none;
   box-shadow: 5px 5px 5px #007bff;
@@ -445,6 +444,12 @@ main .intro{
   }
 }
 
+.card-link .card{
+  background: rgba(0, 123, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(0, 123, 255, 0.3);
+}
+
 .card-group {
   margin-bottom: 3rem;
 } 
@@ -458,6 +463,9 @@ main .intro{
   font-weight: 800;
   text-align: center;
   margin: 0.5em 0em;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .card-item .card-text{
@@ -487,6 +495,8 @@ main .intro{
 .js    { background-color: #B9A206; }
 .php   { background-color: #777BB4; }
 .mysql { background-color: #4479A1; }
+.figma { background-color: #a259ff; }
+.photoshop { background-color: #31A8FF }
 
 .card-link a{
   text-decoration: none;
