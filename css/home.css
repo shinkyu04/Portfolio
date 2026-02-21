@@ -693,6 +693,7 @@ main .intro{
   color: #555;
   border-top: 1px solid #535353;
   padding-top: 15px;
+  text-align: justify;
 }
 
 /* MOBILE VIEW OVERRIDES */
@@ -746,7 +747,7 @@ main .intro{
   text-align: justify;
 }
 
-.contact-container .cont-text .cell{
+.contact-container .cont-text .suggestion{
   margin-top: 50px;
 }
 
