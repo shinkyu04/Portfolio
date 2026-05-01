@@ -481,6 +481,7 @@ main .intro{
   justify-content: center;
   margin: 1rem 0rem 0rem 0em;
   padding: 1rem 0rem;
+  background: rgba(0, 17, 36, 0.15);
 }
 
 .card-item span{
