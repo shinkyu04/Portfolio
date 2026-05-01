@@ -479,8 +479,8 @@ main .intro{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1.5em 0em;
-  padding: 0rem 1rem;
+  margin: 1rem 0rem 0rem 0em;
+  padding: 1rem 0rem;
 }
 
 .card-item span{
@@ -493,11 +493,13 @@ main .intro{
 /* Specific backgrounds */
 .html  { background-color: #E34F26; }
 .css   { background-color: #1572B6; }
-.js    { background-color: #B9A206; }
+.bootstrap { background-color: #8e01a0; }
+.js    { background-color: #B9A206; } 
 .php   { background-color: #777BB4; }
 .mysql { background-color: #4479A1; }
 .figma { background-color: #a259ff; }
 .photoshop { background-color: #31A8FF }
+.laravel { background-color: #E62020 }
 
 .card-link a{
   text-decoration: none;
@@ -508,6 +510,26 @@ main .intro{
   position: relative;
   overflow: hidden; /* Keeps the overlay inside the card corners */
   transition: all 0.3s ease;
+}
+
+.status-badge {
+  position: absolute;
+  top: 10px;          /* Distance from the top */
+  left: 10px;         /* Distance from the left */
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  z-index: 10;        /* Ensures it sits on top of the image */
+}
+
+.completed {
+  background-color: rgba(40, 167, 69, 0.9); /* Green with high opacity */
+  color: white;
+}
+
+.in-progress {
+  background-color: rgba(255, 193, 7, 0.9); /* Yellow with high opacity */
+  color: black;
 }
 
 .card-img-overlay {

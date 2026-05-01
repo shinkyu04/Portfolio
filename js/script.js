@@ -68,7 +68,7 @@ backToTopButton.addEventListener('click', () => {
 });
 
 (function(){
-    emailjs.init("fLW5bk1yepj2yZOZH");
+    emailjs.init("LJPwoTe5LcsTCrnPV");
 })();
 
 function sendMail(event) {
@@ -105,7 +105,7 @@ function sendMail(event) {
         return;
     }
 
-    emailjs.send('service_qw727zr', 'template_sh1ha7y', params)
+    emailjs.send('service_uu2rr71', 'template_h0poc5b', params)
         .then(
             function() {
                 Swal.fire({
